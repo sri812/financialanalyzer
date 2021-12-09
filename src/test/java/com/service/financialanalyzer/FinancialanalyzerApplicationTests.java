@@ -1,4 +1,4 @@
-package com.service.financialanalyzer;
+	package com.service.financialanalyzer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -8,6 +8,7 @@ class FinancialanalyzerApplicationTests {
 
 	@Test
 	void contextLoads() {
+//SOP
 	}
 
 }
