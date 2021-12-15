@@ -11,9 +11,9 @@ import java.util.List;
 import static com.service.financialanalyzer.ApplicationConstants.TRANSACTION_SUMMARY_QUERY;
 
 @Repository
-public interface TransactionRepository extends CrudRepository<CustomerTransaction, Integer> {
+public interface TransactionRepository extends CrudRepository<CustomerTransaction, Long> {
 
     @Query(value = TRANSACTION_SUMMARY_QUERY, nativeQuery = true)
-     List<TransactionAggregationDTO> getAggregatedTransactions(Integer customerID);
+     List<TransactionAggregationDTO> getAggregatedTransactions(Long customerID);
 }
 

@@ -6,6 +6,7 @@ public class ApplicationConstants {
 
     public static final String CUSTOMER_API = "/api/customers";
     public static final String CUSTOMER_AGGREGATED_TRANSACTION = "/{customerID}/transactions/statement";
+    public static final String CUSTOMER_ID = "/{customerID}";
 
     public static final String RECORD_NOT_FOUND = "Customer ID not found. please enter valid customer ID";
 

@@ -1,5 +1,6 @@
 package com.service.financialanalyzer.controller;
 
+import com.service.financialanalyzer.entity.CustomerDTO;
 import com.service.financialanalyzer.entity.TransactionAggregationDTO;
 import com.service.financialanalyzer.exception.RecordNotFoundException;
 import com.service.financialanalyzer.service.TransactionAggregationService;
@@ -14,15 +15,15 @@ import static com.service.financialanalyzer.ApplicationConstants.*;
 
 @RestController
 @RequestMapping(CUSTOMER_API)
-public class TransactionController {
+public class GetController {
 
-    Logger logger = LogManager.getLogger(TransactionController.class);
+    Logger logger = LogManager.getLogger(GetController.class);
 
     @Autowired
     private TransactionAggregationService transactionService;
 
     @GetMapping(CUSTOMER_AGGREGATED_TRANSACTION)
-    public List<TransactionAggregationDTO> getTransHistoryByCustomerID(@PathVariable Integer customerID) throws RecordNotFoundException {
+    public List<TransactionAggregationDTO> getTransHistoryByCustomerID(@PathVariable Long customerID) throws RecordNotFoundException {
         logger.info("Inside Controller Method getTransHistoryByCustomerID with customer ID " + customerID);
 
         List<TransactionAggregationDTO>  transactions = transactionService.getTransHistoryByCustomerID(customerID);
@@ -32,4 +33,5 @@ public class TransactionController {
         }
         return transactions;
     }
+
 }

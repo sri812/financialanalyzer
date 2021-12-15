@@ -4,9 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "customer_transactions")
@@ -17,12 +15,17 @@ public class CustomerTransaction {
 
     @Id
     private Integer transactionId;
-    private Integer customerId;
+
+//    @ManyToOne
+//    @JoinColumn(name = "customerID", nullable = false)
+//    private Customer customer;
+
     private Integer amount;
+
     private Long transactionDesc;
+
     private String paymentType;
+
     private String transactionTimestamp;
-
-
 
 }
