@@ -1,0 +1,29 @@
+2021-12-15 21:30:48,583 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
+2021-12-15 21:30:48,701 INFO o.s.b.StartupInfoLogger [main] Starting FinancialanalyzerApplication using Java 17.0.1 on DESKTOP-2VR29UC with PID 112616 (C:\Users\srilekha\IdeaProjects\financialanalyzer\target\classes started by srilekha in C:\Users\srilekha\IdeaProjects\financialanalyzer)
+2021-12-15 21:30:48,710 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.6.1, Spring v5.3.13
+2021-12-15 21:30:48,710 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-12-15 21:30:49,264 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-15 21:30:49,329 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+2021-12-15 21:30:49,857 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2021-12-15 21:30:49,857 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2021-12-15 21:30:49,857 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2021-12-15 21:30:49,857 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-15 21:30:49,971 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-12-15 21:30:49,971 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1220 ms
+2021-12-15 21:30:50,092 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-15 21:30:50,141 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-12-15 21:30:50,265 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-15 21:30:50,355 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2021-12-15 21:30:50,355 WARN c.z.h.u.DriverDataSource [main] Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-12-15 21:30:50,702 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-12-15 21:30:50,718 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-12-15 21:30:51,243 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-15 21:30:51,243 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-15 21:30:51,609 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-15 21:30:52,430 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2021-12-15 21:30:52,450 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-15 21:30:52,450 INFO o.s.b.StartupInfoLogger [main] Started FinancialanalyzerApplication in 4.114 seconds (JVM running for 4.881)
+2021-12-15 21:30:54,267 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-15 21:30:54,267 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-12-15 21:30:54,268 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2021-12-15 21:30:54,885 INFO o.s.a.AbstractOpenApiResource [http-nio-8080-exec-3] Init duration for springdoc-openapi is: 178 ms
