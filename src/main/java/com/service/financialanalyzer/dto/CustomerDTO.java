@@ -1,22 +1,26 @@
-package com.service.financialanalyzer.entity;
+package com.service.financialanalyzer.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.time.LocalDate;
 import java.util.Set;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class CustomerDTO {
 
     @NotBlank(message = "Customer Name is mandatory")
     private String customerName;
+
+    private Long mobileNumber;
 
     private Double balance;
 
@@ -31,11 +35,14 @@ public class CustomerDTO {
     @Column(name = "govt_id_type") @NotBlank(message = "Govt ID Type is mandatory")
     private String govtIdType;
 
-    @NotBlank(message = "Govt ID is mandatory")
+    @Column(unique = true) @NotBlank(message = "Govt ID is mandatory")
     private String govtId;
 
     @Past
     private LocalDate dob;
+
+    private Set<@Valid CustomerEmailDTO> emails;
+
 
 }
 

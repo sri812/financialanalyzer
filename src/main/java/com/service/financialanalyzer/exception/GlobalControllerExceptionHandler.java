@@ -26,6 +26,15 @@ public class GlobalControllerExceptionHandler extends ResponseEntityExceptionHan
         return new ResponseEntity<>(exceptionMessage, HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(DuplicateEntryFoundException.class)
+    public ResponseEntity<ExceptionResponse> handleRecordNotFoundException(
+            DuplicateEntryFoundException ex, WebRequest request) {
+
+        ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
+                request.getDescription(false), HttpStatus.NOT_ACCEPTABLE.getReasonPhrase());
+        return new ResponseEntity<>(exceptionResponse, HttpStatus.CONFLICT);
+    }
+
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
                                                                   HttpHeaders headers,
@@ -42,6 +51,12 @@ public class GlobalControllerExceptionHandler extends ResponseEntityExceptionHan
 
         body.put("errors", errors);
         return new ResponseEntity<>(body, headers, status);
+
+    }
+
+    @ExceptionHandler(value={Exception.class})
+    public ResponseEntity handleUnKnownException(Exception ex){
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
 
     }
 }
